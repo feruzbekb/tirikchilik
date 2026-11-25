@@ -21,3 +21,7 @@ Menejer bilan bog'lanish uchun: @tirik_chilik"""
 comments = """✅ <b>Tirikchilik</b> loyihasini tanlaganingiz uchun rahmat.
 Bizning xizmatlarimiz sifatini yaxshilashga yordam bersangiz juda xursand bo’lar edik :)
 Buning uchun 5 ballik tizim asosida bizni baholang yoki o'z tilaklaringizni yozib jo'nating."""
+
+
+lang_msg = """Iltimos, tilni tanlang
+Пожалуйста, выберите язык ⬇️"""

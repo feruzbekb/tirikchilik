@@ -5,6 +5,7 @@ from telegram.ext import (
     CommandHandler,
     MessageHandler,
     Filters,
+    CallbackQueryHandler,
 )
 
 from settings import TOKEN
@@ -14,6 +15,8 @@ from callbacks import (
     send_partnership,
     send_info,
     send_comments,
+    send_languages,
+    select_lang,
 )
 
 
@@ -56,6 +59,17 @@ def main() -> None:
             filters=Filters.text("✍️ Izoh qoldirish"),
             callback=send_comments,
         )
+    )
+    dispatcher.add_handler(
+        handler=MessageHandler(
+            filters=Filters.text("🌐 Tilni tanlash"),
+            callback=send_languages,
+        )
+    )
+
+    # callbackquery handlers
+    dispatcher.add_handler(
+        handler=CallbackQueryHandler(callback=select_lang, pattern="lang:")
     )
 
     updater.start_polling()
